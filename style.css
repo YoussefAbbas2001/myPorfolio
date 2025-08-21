@@ -220,6 +220,7 @@ section {
     margin: 0 10rem;
     box-sizing: border-box;
     min-height:fit-content;
+
     
 }
 
@@ -237,7 +238,7 @@ section {
    
 }
 
-.section_pic-container img {
+.section__pic-container img {
     background: transparent;
     border-radius: 70%; /* optional: makes image circular */
     box-shadow: 0 4px 16px rgba(0,0,0,0.15); /* optional: adds subtle shadow */
@@ -247,7 +248,7 @@ section {
     display: flex;
     height: 400px;
     width: 400px;
-    margin: auto 0;
+    margin: 0 0;
 }
 
 .section__text {
@@ -255,16 +256,16 @@ section {
   text-align: center;
 }
 
-.section_text p {
+.section__text p {
   font-weight: 600;
 }
 
-.section_text_p1 {
+.section__text__p1 {
   font-size: 1.25rem;
   text-align: center;
 }
 
-.section_text_p2 {
+.section__text__p2 {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -275,6 +276,17 @@ section {
 .title {
   font-size: 3rem;
   text-align: center ;
+  margin-bottom: 0.5rem; /* Reduce space below the title */
+}
+
+.section__text__p1 {
+  margin-bottom: 0.25rem; /* Reduce space below the subtitle */
+}
+
+.section-container {
+  margin-top: 0; /* Remove any top margin */
+  /* If you want even less space, try: */
+  /* padding-top: 0; */
 }
 
 #socials-container {
@@ -296,14 +308,14 @@ section {
 .btn-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
-  width: 12rem;
+  width: 20rem;
   border-radius: 2rem;
 }
 
@@ -338,3 +350,71 @@ section {
 .btn-container {
   gap: 1rem;
 }
+
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  /* margin-top: 2rem; */
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+/* Light mode */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  color: #222;
+  text-align: center;
+}
+
+/* Dark mode overrides */
+body.dark-mode .details-container {
+  background: #222;
+  border: #444 0.1rem solid;
+  border-color: #444;
+  color: #f1f1f1;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.text-container{
+  font-size: 1.25rem;
+  text-align: justify;
+}
+/* .section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+} */
